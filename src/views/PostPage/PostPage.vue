@@ -89,14 +89,16 @@ const { data: commentsDataRes } = await useAPI<CommentsResponse>(
   },
 );
 
+const commentsData = ref(commentsDataRes.value);
+
 const deleteArray = ref([]);
 function removeData(id: number) {
   deleteArray.value.push(id);
-  commentsDataRes.value.total--;
-  commentsDataRes.value.limit--;
+  commentsData.value.total--;
+  commentsData.value.limit--;
 }
 function resetData() {
-  commentsDataRes.value.comments = commentsDataRes.value.comments.filter(
+  commentsData.value.comments = commentsData.value.comments.filter(
     (item) => !deleteArray.value.includes(item.id),
   );
   deleteArray.value = [];
@@ -112,7 +114,7 @@ function resetData() {
         </h2>
         <div class="post-comments__comments">
           <div
-            v-for="commentData in commentsDataRes.comments"
+            v-for="commentData in commentsData.comments"
             :key="commentData.id"
             class="post-comments__comment comment">
             <div class="comment__left">

@@ -3,8 +3,9 @@ const development: boolean = process.env.NODE_ENV !== "production";
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   app: {
-    baseURL: development ? "/" : "/sites/stass-app/",
-    // baseURL: "/",
+    // baseURL: development ? "/" : "/sites/stas-app/",
+    baseURL: "/",
+    // baseURL: development ? "/" : "/sites/stas-app/",
   },
   devtools: { enabled: false },
   srcDir: "src/",
