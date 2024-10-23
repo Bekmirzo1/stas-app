@@ -1,6 +1,6 @@
 # Архитектура
 ## [FSD](https://feature-sliced.design/ru/docs/get-started/overview)
-Со [спецификой](https://feature-sliced.design/ru/docs/guides/tech/with-nextjs) ssr фреймварков по типу nuxt или next
+Со [спецификой](https://feature-sliced.design/ru/docs/guides/tech/with-nextjs) ssr фреймворков по типу nuxt или next
 
 # Стэк технолигий
 Vue(Nuxt), Pinia, SASS(SCSS), Typescript
