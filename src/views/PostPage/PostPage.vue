@@ -3,24 +3,24 @@ import { PostWidget, type Post } from "@/widgets/PostWidget";
 useHead({
   title: "Пост",
 });
-const post: Post = {
-  body: "His mother had always taught him not to ever think of himself as better than others. He'd tried to live by this motto. He never looked down on those who were less fortunate or who had less money than him. But the stupidity of the group of people he was talking to made him change his mind.",
-  id: 1,
-  reactions: {
-    likes: 192,
-    dislikes: 25,
-  },
-  tags: ["history", "american", "crime"],
-  title: "His mother had always taught him",
-  userId: 121,
-  views: 30,
-};
+// const post: Post = {
+//   body: "His mother had always taught him not to ever think of himself as better than others. He'd tried to live by this motto. He never looked down on those who were less fortunate or who had less money than him. But the stupidity of the group of people he was talking to made him change his mind.",
+//   id: 1,
+//   reactions: {
+//     likes: 192,
+//     dislikes: 25,
+//   },
+//   tags: ["history", "american", "crime"],
+//   title: "His mother had always taught him",
+//   userId: 121,
+//   views: 30,
+// };
 
 const route = useRoute();
-/* 
-const { data } = await useAPI<Post>(`/posts/${route.params.id}`, {
+
+const { data: postData } = await useAPI<Post>(`/posts/${route.params.id}`, {
   method: "get",
-}); */
+});
 interface User {
   id: number;
   username: string;
@@ -88,13 +88,10 @@ const { data: commentsDataRes } = await useAPI<CommentsResponse>(
     query: { limit: 10 },
   },
 );
-// const commentsStaticData = commentsDataRes.value;
-// const commentsData = ref(commentsDataRes.value);
-// const commentsData2 = shallowRef(commentsDataRes.value);
+
 const deleteArray = ref([]);
 function removeData(id: number) {
   deleteArray.value.push(id);
-  // commentsData.value.comments = commentsData.value.comments.filter((item) => item.id !== index);
   commentsDataRes.value.total--;
   commentsDataRes.value.limit--;
 }
@@ -108,7 +105,7 @@ function resetData() {
 <template>
   <div class="post-comments">
     <div class="post-comments__container">
-      <PostWidget :post="post" class="post-comments__post" />
+      <PostWidget :post="postData" class="post-comments__post" />
       <div class="post-comments__body">
         <h2 class="post-comments__title title">
           {{ commentsDataRes.total }} comments
@@ -143,7 +140,6 @@ function resetData() {
                     <span
                       class="comment__delete-text link-underline"
                       @click="removeData(commentData.id)">
-                      <!-- <span class="comment__delete-text link-underline"> -->
                       Delete
                     </span>
                   </div>
