@@ -16,6 +16,7 @@
   &__button {
     padding: toRem(8);
     background: rgba(4, 4, 5, 0.04);
+    color: $blackColor;
     // transition: background-color $trsDur ease 0s;
     @include transMultiple(background-color color, $trsDur, ease, 0s);
 

@@ -33,6 +33,6 @@
   }
 }
 .page{
-  padding: toRem(0) toRem(0) toRem(50) toRem(0);
+  padding: toRem(0) toRem(0) toRem(60) toRem(0);
 }
 </style>

@@ -35,7 +35,7 @@
   // line-height: toRem(12);
   line-height: toRem(28);
   font-weight: 700;
-  color: $orangeMain;
+  color: $orangeMainColor;
 }
 
 .title {
@@ -62,6 +62,12 @@
 .link-underline {
   display: inline-block;
   position: relative;
+  cursor: pointer;
+  user-select: none;
+  // height: toRem(14);
+
+  // font-size: toRem(14);
+  // padding: toRem(0) toRem(0) toRem(4) toRem(0);
   // padding: toRem(0) toRem(0) toRem(2) toRem(0);
 
   @media (any-hover: hover) {
