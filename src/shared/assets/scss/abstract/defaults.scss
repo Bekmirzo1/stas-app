@@ -1,0 +1,32 @@
+@use "mixins.scss" as *;
+
+$fontFamily: "SFProText";
+$fontFamilyDisplay: "SFProDisplay";
+
+
+$fontSize: toRem(20);
+
+$minWidth: 375;
+$maxWidth: 1920;
+$maxWidthContainer: 678;
+$containerPadding: 20;
+$containerPaddingMob: 16;
+
+$maxHeight: 1080;
+
+// Ширина срабатываемых брейкпоинтов
+$containerWidth: $maxWidthContainer + $containerPadding * 2;
+$laptop: 1365.98;
+$tablet: 995.98;
+$mob: 767.98;
+$mobSmall: 479.98;
+
+// Брейк-поинты
+$md0: em($containerWidth - 0.02); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$md1: em($laptop - 0.02); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$md2: em($tablet); // Планшеты, некоторые телефоны в горизонтальном положении
+$md3: em($mob); // Телефоны L
+$md4: em($mobSmall); // Телефоны S
+//====================================================================================================
+// Header options
+$headerHeight: 50;

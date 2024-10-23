@@ -1,0 +1,58 @@
+@use 'abstract' as *;
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.ibg {
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+.block {
+  display: block;
+}
+
+//====================================================================================================
+.mob {
+  @media (min-width: $md3) {
+    display: none;
+  }
+}
+
+//====================================================================================================
+.title-big {
+  font-family: $fontFamilyDisplay;
+  font-size: toRem(40);
+  // line-height: toRem(12);
+  line-height: toRem(28);
+  font-weight: 700;
+  color: $orangeMain;
+}
+
+.title {
+  font-size: toRem(28);
+  font-weight: 700;
+  letter-spacing: toRem(-1.45);
+}
+
+.text {
+  letter-spacing: toRem(-1);
+}
+
+.text-caption {
+  font-size: toRem(14);
+  letter-spacing: toRem(-0.08);
+}
+.text-number-tab {
+  font-size: toRem(14);
+  letter-spacing: toRem(-1);
+}

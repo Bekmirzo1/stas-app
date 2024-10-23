@@ -1,0 +1,42 @@
+@use "sass:math";
+@use "fonts.scss";
+@use "abstract" as *;
+@use "null";
+@use "common";
+@use "forms";
+
+html {
+  scroll-behavior: smooth;
+  --container-padding: #{toRem($containerPadding)};
+  @media (max-width: $md3) {
+    --menu-mob-height: #{toRem(40)};
+    --menu-mob-from-top: #{toRem(100)};
+    --container-padding: #{toRem($containerPaddingMob)};
+
+  }
+}
+
+
+body {
+  // overflow: hidden;
+
+  // .unlock & {
+  //   overflow: auto;
+  // }
+
+}
+
+.page {
+  // padding: toRem($headerHeight) toRem(0) toRem(0) toRem(0);
+
+  // @media (max-width: $md3) {
+  //   padding: toRem($headerMobHeight) toRem(0) toRem(0) toRem(0);
+  // }
+}
+
+[class*="__container"],
+.container {
+  max-width: toRem($containerWidth);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}

@@ -1,0 +1,20 @@
+{
+  "vue.codeActions.enabled": false,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "path-autocomplete.pathMappings": {
+    "@img/": "${folder}/src/app/assets/images/"
+  },
+  "typescript.suggestionActions.enabled": false,
+  // "typescript.validate.enable": false,
+  "path-autocomplete.extensionOnImport": false
+  // "typescript.validate.enable": false,
+  // "javascript.validate.enable": false,
+}

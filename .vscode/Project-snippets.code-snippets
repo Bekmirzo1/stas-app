@@ -1,0 +1,513 @@
+{
+	// Place your learnvue workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"vue init": {
+		"scope": "vue",
+		"prefix": "vueI",
+		"body": [
+		"<script setup lang=\"ts\">"
+		""
+		"</script>"
+		"<template>"
+		"	<div>"
+		"		$0"
+		"	</div>"
+		"</template>"
+		"<style lang=\"scss\" scoped>"
+		""
+		"</style>"
+		],
+		"description": "Log output to console"
+	},
+	"VButton": {
+		"scope": "html, vue",
+		"prefix": "vbtn",
+		"body": "<v-button ${2:type=\"button\"} ${1:href=\"\" target=\"_blank\"}>\n\t${0:@ivantaskayev}\n</v-button>"
+	},
+	"Gap for scss": {
+		"scope": "scss",
+		"prefix": "gap",
+		"body": "gap: toRem($1);"
+	},
+	"Margin for scss": {
+		"scope": "scss",
+		"prefix": "mm",
+		"body": "margin: toRem(0) toRem(0) toRem(0) toRem(0);"
+	},
+	"Margin top for scss": {
+		"scope": "scss",
+		"prefix": "mmt",
+		"body": "margin: toRem($1) toRem(0) toRem(0) toRem(0);"
+	},
+	"Margin right for scss": {
+		"scope": "scss",
+		"prefix": "mmr",
+		"body": "margin: toRem(0) toRem($1) toRem(0) toRem(0);"
+	},
+	"Margin bottom for scss": {
+		"scope": "scss",
+		"prefix": "mmb",
+		"body": "margin: toRem(0) toRem(0) toRem($1) toRem(0);"
+	},
+	"Margin left for scss": {
+		"scope": "scss",
+		"prefix": "mml",
+		"body": "margin: toRem(0) toRem(0) toRem(0) toRem($1);"
+	},
+	"margin top bottom for scss": {
+		"scope": "scss",
+		"prefix": "mtb",
+		"body": "margin: toRem($1) toRem(0);"
+	},
+	"margin right left for scss": {
+		"scope": "scss",
+		"prefix": "mrl",
+		"body": "margin: toRem(0) toRem($1);"
+	},
+	"Margin right EM": {
+		"scope": "scss",
+		"prefix": "mre",
+		"body": "margin-right: em($1, $2);"
+	},
+	"Margin bottom EM": {
+		"scope": "scss",
+		"prefix": "mba",
+		"body": "margin-bottom: em($1, $2);"
+	},
+	"Margin right exept of last child": {
+		"scope": "scss",
+		"prefix": "mrlc",
+		"body": [
+			"&:not(:last-child) {\n\tmargin-right: toRem($1);\n}"
+		],
+	},
+	"Margin right exept of last child + EM": {
+		"scope": "scss",
+		"prefix": "mrlce",
+		"body": [
+			"&:not(:last-child) {\n\tmargin-right: em($1, $2);\n}"
+		],
+	},
+	"Margin bottom exept of last child": {
+		"scope": "scss",
+		"prefix": "mblc",
+		"body": [
+			"&:not(:last-child) {\n\tmargin-bottom: toRem($1);\n}"
+		],
+	},
+	"Margin bottom exept of last child + EM": {
+		"scope": "scss",
+		"prefix": "mblce",
+		"body": [
+			"&:not(:last-child) {\n\tmargin-bottom: em($1, $2);\n}$0"
+		],
+	},
+	"Padding for scss": {
+		"scope": "scss",
+		"prefix": "p",
+		"body": "padding: toRem($1);"
+	},
+	"Padding top for scss": {
+		"scope": "scss",
+		"prefix": "ppt",
+		"body": "padding: toRem($1) toRem(0) toRem(0) toRem(0);"
+	},
+	"Padding right for scss": {
+		"scope": "scss",
+		"prefix": "ppr",
+		"body": "padding: toRem(0) toRem($1) toRem(0) toRem(0);"
+	},
+	"Padding bottom for scss": {
+		"scope": "scss",
+		"prefix": "ppb",
+		"body": "padding: toRem(0) toRem(0) toRem($1) toRem(0);"
+	},
+	"Padding left for scss": {
+		"scope": "scss",
+		"prefix": "ppl",
+		"body": "padding: toRem(0) toRem(0) toRem(0) toRem($1);"
+	},
+	"padding right left for scss": {
+		"scope": "scss",
+		"prefix": "prl",
+		"body": "padding: toRem(0) toRem($1);"
+	},
+	"padding top bottom for scss": {
+		"scope": "scss",
+		"prefix": "ptb",
+		"body": "padding: toRem($1) toRem(0);"
+	},
+	"padding top bottom, right left for scss": {
+		"scope": "scss",
+		"prefix": "p+",
+		"body": "padding: toRem($1) toRem($2);"
+	},
+	"padding bottom for image": {
+		"scope": "scss",
+		"prefix": "pbi",
+		"body": "padding-bottom: percent($1, $2);"
+	},
+	"media max-width for scss": {
+		"scope": "scss",
+		"prefix": "@mx",
+		"body": [
+			"@media (max-width: em($1)) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media max-width md0": {
+		"scope": "scss",
+		"prefix": "@mxd0",
+		"body": [
+			"@media (max-width: \\$md0) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media max-width md1 ": {
+		"scope": "scss",
+		"prefix": "@mxd1",
+		"body": [
+			"@media (max-width: \\$md1) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media max-width md2 ": {
+		"scope": "scss",
+		"prefix": "@mxd2",
+		"body": [
+			"@media (max-width: \\$md2) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media max-width md3 ": {
+		"scope": "scss",
+		"prefix": "@mxd3",
+		"body": [
+			"@media (max-width: \\$md3) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media max-width md4 ": {
+		"scope": "scss",
+		"prefix": "@mxd4",
+		"body": [
+			"@media (max-width: \\$md4) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media min-width for scss": {
+		"scope": "scss",
+		"prefix": "@mn",
+		"body": [
+			"@media (min-width: em($1)) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media min-width m0": {
+		"scope": "scss",
+		"prefix": "@mnd0",
+		"body": [
+			"@media (min-width: \\$md0) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media min-width md1": {
+		"scope": "scss",
+		"prefix": "@mnd1",
+		"body": [
+			"@media (min-width: \\$md1) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media min-width md2": {
+		"scope": "scss",
+		"prefix": "@mnd2",
+		"body": [
+			"@media (min-width: \\$md2) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media min-width md3": {
+		"scope": "scss",
+		"prefix": "@mnd3",
+		"body": [
+			"@media (min-width: \\$md3) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media min-width md4": {
+		"scope": "scss",
+		"prefix": "@mnd4",
+		"body": [
+			"@media (min-width: \\$md4) {"
+			"    $0"
+		"}"
+		]
+	},
+	"media any-hover hover": {
+		"scope": "scss",
+		"prefix": "hv",
+		"body": [
+			"@media (any-hover: hover) {\n\ttransition: all 0.3s ease 0s;\n\t&:hover {\n\t\t$0\n\t}\n}"
+		]
+	},
+	":before": {
+		"scope": "scss",
+		"prefix": "bfr",
+		"body": [
+			"&::before {\n\tcontent: \"\";\n\t$0\n}"
+		],
+	},
+	":after": {
+		"scope": "scss",
+		"prefix": "afr",
+		"body": [
+			"&::after {\n\tcontent: \"\";\n\t$0\n}"
+		],
+	},
+	// triangle
+	"Width with REM": {
+		"scope": "scss",
+		"prefix": "w",
+		"body": "width: toRem($1);",
+	},
+	"Height with REM": {
+		"scope": "scss",
+		"prefix": "h",
+		"body": "height: toRem($1);",
+	},
+	"font-size with REM": {
+		"scope": "scss",
+		"prefix": "fz",
+		"body": "font-size: toRem($1);"
+	},
+	"border with REM": {
+		"scope": "scss",
+		"prefix": "bd",
+		"body": "border: toRem(${1:1}) solid ${2:$$mainColor};"
+	},
+	"border bottom with REM": {
+		"scope": "scss",
+		"prefix": "bdb",
+		"body": "border-bottom: toRem(${1:1}) solid ${2:$$mainColor};"
+	},
+	"border-radius with REM": {
+		"scope": "scss",
+		"prefix": "bdrs",
+		"body": "border-radius: toRem(${1:50});"
+	},
+	"@include adaptiveValue": {
+		"scope": "scss",
+		"prefix": "@av",
+		"body": "@include adaptiveValue(\"$1\", $2, $3);"
+	},
+	"@include adaptiveFont": {
+		"scope": "scss",
+		"prefix": "@af",
+		"body": "@include adaptiveValue(\"font-size\", $1, $2);"
+	},
+	"@include adaptiveValue width": {
+		"scope": "scss",
+		"prefix": "@aw",
+		"body": "@include adaptiveValue(\"width\", $1, $2);"
+	},
+	"@include adaptiveValue height": {
+		"scope": "scss",
+		"prefix": "@ah",
+		"body": "@include adaptiveValue(\"height\", $1, $2);"
+	},
+	"@include adaptiveValue margin-top": {
+		"scope": "scss",
+		"prefix": "@mt",
+		"body": "@include adaptiveValue(\"margin-top\", $1, $2);"
+	},
+	"@include adaptiveValue margin-right": {
+		"scope": "scss",
+		"prefix": "@mr",
+		"body": "@include adaptiveValue(\"margin-right\", $1, $2);"
+	},
+	"@include adaptiveValue margin-bottom": {
+		"scope": "scss",
+		"prefix": "@mb",
+		"body": "@include adaptiveValue(\"margin-bottom\", $1, $2);"
+	},
+	"@include adaptiveValue margin-left": {
+		"scope": "scss",
+		"prefix": "@ml",
+		"body": "@include adaptiveValue(\"margin-left\", $1, $2);"
+	},
+	"@include adaptiveValue padding-top": {
+		"scope": "scss",
+		"prefix": "@pt",
+		"body": "@include adaptiveValue(\"padding-top\", $1, $2);"
+	},
+	"@include adaptiveValue padding-right": {
+		"scope": "scss",
+		"prefix": "@pr",
+		"body": "@include adaptiveValue(\"padding-right\", $1, $2);"
+	},
+	"@include adaptiveValue padding-bottom": {
+		"scope": "scss",
+		"prefix": "@pb",
+		"body": "@include adaptiveValue(\"padding-bottom\", $1, $2);"
+	},
+	"@include adaptiveValue padding-left": {
+		"scope": "scss",
+		"prefix": "@pl",
+		"body": "@include adaptiveValue(\"padding-left\", $1, $2);"
+	},
+	"math.div": {
+		"scope": "scss",
+		"prefix": "div",
+		"body": "math.div($1, $0)"
+	},
+	"EM": {
+		"scope": "scss",
+		"prefix": "em",
+		"body": [
+			"em($1,$2)"
+		],
+		"description": "Вызов миксина перевода в EM"
+	},
+	"REM": {
+		"scope": "scss",
+		"prefix": "rem",
+		"body": [
+			"toRem($1)"
+		],
+		"description": "Вызов миксина перевода в REM"
+	},
+	"Percent": {
+		"scope": "scss",
+		"prefix": "prc",
+		"body": [
+			"percent($1,$2)"
+		],
+		"description": "Вызов миксина перевода в %"
+	},
+	"@include adaptiveValue advanced": {
+		"scope": "scss",
+		"prefix": "@ava",
+		"body": "@include adaptiveValue(\"$1\", $2, $3, $${4:containerWidth}, $${5:tablet}, 1);"
+	},
+	"@include adaptiveFont advanced": {
+		"scope": "scss",
+		"prefix": "@afa",
+		"body": "@include adaptiveValue(\"font-size\", $1, $2, $${3:containerWidth}, $${4:tablet}, 1);"
+	},
+	"@include adaptiveValue width advanced": {
+		"scope": "scss",
+		"prefix": "@awa",
+		"body": "@include adaptiveValue(\"width\", $1, $2, $${3:containerWidth}, $${4:tablet}, 1);"
+	},
+	"@include adaptiveValue height advanced": {
+		"scope": "scss",
+		"prefix": "@aha",
+		"body": "@include adaptiveValue(\"height\", $1, $2, $${3:containerWidth}, $${4:tablet}, 1);"
+	},
+	"@include adaptiveValue margin-top advanced": {
+		"scope": "scss",
+		"prefix": "@mta",
+		"body": "@include adaptiveValue(\"margin-top\", $1, $2, $${3:containerWidth}, $${4:tablet}, 1);"
+	},
+	"@include adaptiveValue margin-right advanced": {
+		"scope": "scss",
+		"prefix": "@mra",
+		"body": "@include adaptiveValue(\"margin-right\", $1, $2, $${3:containerWidth}, $${4:tablet}, 1);"
+	},
+	"@include adaptiveValue margin-bottom advanced": {
+		"scope": "scss",
+		"prefix": "@mba",
+		"body": "@include adaptiveValue(\"margin-bottom\", $1, $2, $${3:containerWidth}, $${4:tablet}, 1);"
+	},
+	"@include adaptiveValue margin-left advanced": {
+		"scope": "scss",
+		"prefix": "@mla",
+		"body": "@include adaptiveValue(\"margin-left\", $1, $2, $${3:containerWidth}, $${4:tablet}, 1);"
+	},
+	"@include adaptiveValue padding-top advanced": {
+		"scope": "scss",
+		"prefix": "@pta",
+		"body": "@include adaptiveValue(\"padding-top\", $1, $2, $${3:containerWidth}, $${4:tablet}, 1);"
+	},
+	"@include adaptiveValue padding-right advanced": {
+		"scope": "scss",
+		"prefix": "@pra",
+		"body": "@include adaptiveValue(\"padding-right\", $1, $2, $${3:containerWidth}, $${4:tablet}, 1);"
+	},
+	"@include adaptiveValue padding-bottom advanced": {
+		"scope": "scss",
+		"prefix": "@pba",
+		"body": "@include adaptiveValue(\"padding-bottom\", $1, $2, $${3:containerWidth}, $${4:tablet}, 1);"
+	},
+	"@include adaptiveValue padding-left advanced": {
+		"scope": "scss",
+		"prefix": "@pla",
+		"body": "@include adaptiveValue(\"padding-left\", $1, $2, $${3:containerWidth}, $${4:tablet}, 1);"
+	},
+	"anim": {
+		"scope": "scss",
+		"prefix": ".a",
+		"body": "&.anim {\n\t$0\n}"
+	},
+	"animitem + anim": {
+		"scope": "scss",
+		"prefix": ".aia",
+		"body": "&.animitem {\n\t$0\n\t&.anim {\n\t\t\n\t}\n}"
+	},
+	"@include transition multiple": {
+		"scope": "scss",
+		"prefix": "@intrsm",
+		"body": "@include transMultiple($${1:optionsAnim}, $${2:trsDur}, ${3:ease}, ${4:0s});"
+	},
+	"img": {
+		"scope": "html",
+		"prefix": "img",
+		"body": "<img src=\"@/shared/assets/images$0\" alt=\"\">"
+	},
+	"video": {
+		"scope": "html",
+		"prefix": "video",
+		"body": "<video autoplay muted loop preload=\"auto\">\n\t<source src=\"@/app/files/$1.webm\" type=\"video/webm\">\n\t<source src=\"@/app/files/$1.mp4\" type=\"video/mp4\">\n</video>"
+	},
+	"nowrap": {
+		"scope": "html",
+		"prefix": "nwr",
+		"body": "<span class=\"nowrap\">$1</span>"
+	},
+	"span": {
+		"scope": "html",
+		"prefix": "sp",
+		"body": "<span class=\"$1\">$2</span>"
+	},
+	"button": {
+		"scope": "html",
+		"prefix": "btn",
+		"body": "<a href=\"\" class=\"btn btn_${1:white}\">$0</a>"
+	},
+}
