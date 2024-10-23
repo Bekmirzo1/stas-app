@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { MainPage } from "@/views/MainPage";
+import { PostPage } from '@/views/PostPage';
 
 </script>
 <template>
-  <MainPage />
+  <PostPage/>
 </template>
 <style lang="scss" scoped>
+
 </style>

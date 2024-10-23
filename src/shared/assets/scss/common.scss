@@ -52,7 +52,39 @@
   font-size: toRem(14);
   letter-spacing: toRem(-0.08);
 }
-.text-number-tab {
+
+.text-number {
   font-size: toRem(14);
   letter-spacing: toRem(-1);
+}
+
+//====================================================================================================
+.link-underline {
+  display: inline-block;
+  position: relative;
+  // padding: toRem(0) toRem(0) toRem(2) toRem(0);
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::after {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: toRem(0.5);
+    background-color: currentColor;
+    opacity: 0.3;
+
+    @media (any-hover: hover) {
+      @include transMultiple(opacity visibility, $trsDur, ease, 0s);
+    }
+  }
 }

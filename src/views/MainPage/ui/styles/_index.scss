@@ -1,23 +1,10 @@
 @use '@/shared/assets/scss/abstract' as *;
+// @use '@/shared/assets/scss/common' as *;
+
 .main {
+
   // .main__container
-  &__container {
-  }
-  // .main__title
-  &__title {
-    margin: toRem(0) toRem(0) toRem(58) toRem(0);
-    text-align: center;
-  }
+  &__container {}
   // .main__columns
-  &__columns {
-  }
-}
-.column-main {
-  // .column-main__title
-  &__title {
-    margin: toRem(0) toRem(0) toRem(16) toRem(0);
-  }
-  // .column-main__text
-  &__text {
-  }
+  &__columns {}
 }

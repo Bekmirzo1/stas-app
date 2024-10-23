@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { PostWidget, type Post } from "@/widgets/PostWidget";
 useHead({
-  title: "Главная",
-});
-const post: Post = {
+  title: 'Пост'
+})
+const data: Post = {
   body: "His mother had always taught him not to ever think of himself as better than others. He'd tried to live by this motto. He never looked down on those who were less fortunate or who had less money than him. But the stupidity of the group of people he was talking to made him change his mind.",
   id: 1,
   reactions: {
@@ -16,25 +16,16 @@ const post: Post = {
   views: 30,
 };
 
-// const { data } = await useAPI<Posts>("/posts", {
-//   method: "get",
-//   query: { limit: 5 },
-// });
-// console.log(data.value);
+/* const route = useRoute();
+const { data } = await useAPI<Post>(`/posts/${route.params.id}`, {
+  method: "get",
+}); */
 </script>
 <template>
-  <div class="main">
-    <div class="main__container">
-      <div class="main__columns">
-        <PostWidget :post="post" />
-      </div>
+  <div class="post-comments">
+    <div class="post-comments__container">
+      <PostWidget :post="data" />
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
-// @use "./ui/styles/_index" as *;
-.main {
-  // padding: toRem(16) toRem(0) toRem(50);
-}
-
-</style>
+<style lang="scss" scoped></style>
