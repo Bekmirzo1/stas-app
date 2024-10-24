@@ -2,7 +2,7 @@
 ## [FSD](https://feature-sliced.design/ru/docs/get-started/overview)
 Со [спецификой](https://feature-sliced.design/ru/docs/guides/tech/with-nextjs) ssr фреймворков по типу nuxt или next
 
-# Стэк технолигий
+# Стек технолигий
 Vue(Nuxt), Pinia, SASS(SCSS), Typescript
 
 # Nuxt Minimal Starter

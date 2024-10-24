@@ -81,6 +81,8 @@ interface CommentsResponse {
 //   limit: 3,
 // };
 
+const router = useRouter();
+
 const { data: commentsDataRes } = await useAPI<CommentsResponse>(
   `/posts/${route.params.id}/comments`,
   {
@@ -97,12 +99,22 @@ function removeData(id: number) {
   commentsData.value.total--;
   commentsData.value.limit--;
 }
+console.log("opened");
+
+
 function resetData() {
   commentsData.value.comments = commentsData.value.comments.filter(
     (item) => !deleteArray.value.includes(item.id),
   );
   deleteArray.value = [];
 }
+onUnmounted(() => {
+  console.log('leave before unmount');
+  if (deleteArray.value.length) {
+    resetData();
+    console.log('reset');
+  }
+});
 </script>
 <template>
   <div class="post-comments">
